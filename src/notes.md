@@ -18,3 +18,24 @@ A new object is created for Prototype when getBean() method is called every time
 		<bean id="hero" class="com.chainsys.projectA.beans.Actor"> </bean>
 		
 ```
+## Bean with parameterize constructor  
+
+
+```java
+	<bean id="film" class="com.chainsys.ProjectA.beans.Movie"> 
+		<constructor-arg type="java.lang.String" value="Arundhadhi" />
+		<constructor-arg type="java.lang.String" value="Praveena" />
+	</bean>
+```
+---
+## Factory method  
+```java
+	 <bean id="nvsilunch" class="com.chainsys.ProjectA.beans.Lunch" factory-method="createNonvegSouthIndianLunch"
+	factory-bean="lf"/>
+	<bean id="vsilunch" class="com.chainsys.ProjectA.beans.Lunch" factory-method="createVegSouthIndianLunch"
+	factory-bean="lf"/>
+	<bean id="nilunch" class="com.chainsys.ProjectA.beans.Lunch" factory-method="createNorthIndianLunch"
+	factory-bean="lf"/>
+	<bean id="chlunch" class="com.chainsys.ProjectA.beans.Lunch" factory-method="createChineseIndianLunch"
+	factory-bean="lf"/>
+```
