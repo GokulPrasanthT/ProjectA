@@ -5,7 +5,7 @@ import java.util.Scanner;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.chainsys.springproject.dao.EmployeeSprings;
+import com.chainsys.springproject.view.EmployeeSprings;
 
 public class Main {
 
@@ -21,6 +21,7 @@ public class Main {
         ConfigurableApplicationContext apcontext=new ClassPathXmlApplicationContext("Employee.xml");
         EmployeeSprings empspring = apcontext.getBean(EmployeeSprings.class);
         Scanner sc=new Scanner(System.in);
+       // empspring.setSc();
         System.out.println("1.) To add New employee in to table");
         System.out.println("2.) To Get all employee datails from table");
         System.out.println("3.) To Update employee details");
